@@ -7,11 +7,17 @@ type Schema = {
   transactions: Transaction[];
   categories: TransactionCategory[];
   cards: Card[];
+  users: User[];
 };
 
 // Configure lowdb
-const defaultData: Schema = { transactions: [], categories: [], cards: [] };
-const dbPath = path.join(process.cwd(), "db", "data.json");
+const defaultData: Schema = {
+  transactions: [],
+  categories: [],
+  cards: [],
+  users: [],
+};
+const dbPath = path.join(process.cwd(), "src", "db", "data.json");
 
 // Get or create database instance
 export const getDB = async () => {
@@ -86,4 +92,45 @@ export async function getCards(): Promise<Card[]> {
   const db = await getDB();
 
   return db.data.cards;
+}
+
+// Helper function to get user by ID
+export async function getUserById(id: string): Promise<User | null> {
+  const db = await getDB();
+  const user = db.data.users.find((u) => u.id === id);
+  return user || null;
+}
+
+// Helper function to create a new user
+export async function createUser(user: Omit<User, "id">): Promise<User> {
+  const db = await getDB();
+
+  const newUser: User = {
+    ...user,
+    id: uuid(),
+  };
+
+  db.data.users.push(newUser);
+  await db.write();
+
+  return newUser;
+}
+
+// Helper function to update user
+export async function updateUser(
+  id: string,
+  updates: Partial<User>,
+): Promise<User | null> {
+  const db = await getDB();
+
+  const index = db.data.users.findIndex((u) => u.id === id);
+  if (index === -1) return null;
+
+  db.data.users[index] = {
+    ...db.data.users[index],
+    ...updates,
+  };
+  await db.write();
+
+  return db.data.users[index];
 }
