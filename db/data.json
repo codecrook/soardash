@@ -1,0 +1,68 @@
+{
+  "transactions": [
+    {
+      "id": "67e11d1d-f3ab-4b8f-8f88-0eea23405e51",
+      "timestamp": "2024-03-15T10:30:00Z",
+      "amount": 42.5,
+      "type": "DEBIT",
+      "description": "Grocery Shopping",
+      "category": {
+        "id": "8d354f76-c6bb-4d0f-a5d4-6c0c8f12c39c",
+        "name": "Food & Dining"
+      },
+      "account": "Eddy Cusuma"
+    },
+    {
+      "id": "9e32c8c3-4d91-46b5-9584-8447c6549b71",
+      "timestamp": "2024-03-14T15:20:00Z",
+      "amount": 2500.0,
+      "type": "CREDIT",
+      "description": "Salary Deposit",
+      "category": {
+        "id": "b6d4e8f2-a7c1-4e5b-9d3a-1f2c8d4e6f7a",
+        "name": "Income"
+      },
+      "account": "Eddy Cusuma"
+    }
+  ],
+  "categories": [
+    {
+      "id": "8d354f76-c6bb-4d0f-a5d4-6c0c8f12c39c",
+      "name": "Food & Dining"
+    },
+    {
+      "id": "2c3d4e5f-6g7h-8i9j-0k1l-2m3n4o5p6q7r",
+      "name": "Transportation"
+    },
+    {
+      "id": "3e4f5g6h-7i8j-9k0l-1m2n-3o4p5q6r7s8t",
+      "name": "Shopping"
+    },
+    {
+      "id": "4f5g6h7i-8j9k-0l1m-2n3o-4p5q6r7s8t9u",
+      "name": "Bills & Utilities"
+    },
+    {
+      "id": "b6d4e8f2-a7c1-4e5b-9d3a-1f2c8d4e6f7a",
+      "name": "Income"
+    }
+  ],
+  "cards": [
+    {
+      "id": "7f8g9h0i-1j2k-3l4m-5n6o-7p8q9r0s1t2u",
+      "name": "Eddy Cusuma",
+      "number": "4532 **** **** 1234",
+      "expiry": "12/25",
+      "cvv": "***",
+      "balance": 3500.0
+    },
+    {
+      "id": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+      "name": "Eddy Cusuma",
+      "number": "5678 **** **** 5678",
+      "expiry": "06/26",
+      "cvv": "***",
+      "balance": 750.0
+    }
+  ]
+}
