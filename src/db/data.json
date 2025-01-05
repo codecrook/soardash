@@ -61,20 +61,20 @@
   ],
   "cards": [
     {
-      "id": "7f8g9h0i-1j2k-3l4m-5n6o-7p8q9r0s1t2u",
-      "name": "Eddy Cusuma",
-      "number": "4532 **** **** 1234",
-      "expiry": "12/25",
-      "cvv": "***",
-      "balance": 3500.0
+      "id": "2f45e37c-42d8-4921-b63c-5c78998713c6",
+      "cardHolder": "Eddy Cusuma",
+      "cardNumber": "5399 7120 8198 3434",
+      "validThru": "12/24",
+      "type": "visa",
+      "isPrimary": true
     },
     {
-      "id": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
-      "name": "Eddy Cusuma",
-      "number": "5678 **** **** 5678",
-      "expiry": "06/26",
-      "cvv": "***",
-      "balance": 750.0
+      "id": "7d4c68a5-9f3b-4e12-8081-3e0d4f1be926",
+      "cardHolder": "Eddy Cusuma",
+      "cardNumber": "5545 2312 3456 7891",
+      "validThru": "09/25",
+      "type": "mastercard",
+      "isPrimary": false
     }
   ],
   "users": []
