@@ -1,17 +1,9 @@
 import { JSONFilePreset } from "lowdb/node";
 import path from "path";
 import { v4 as uuid } from "uuid";
+import { DBSchema } from "./schema";
 
-// Define the database schema type
-type Schema = {
-  transactions: Transaction[];
-  categories: TransactionCategory[];
-  cards: Card[];
-  users: User[];
-};
-
-// Configure lowdb
-const defaultData: Schema = {
+const defaultData: DBSchema = {
   transactions: [],
   categories: [],
   cards: [],
@@ -19,9 +11,9 @@ const defaultData: Schema = {
 };
 const dbPath = path.join(process.cwd(), "src", "db", "data.json");
 
-// Get or create database instance
+// Helper function to get database instance
 export const getDB = async () => {
-  const db = await JSONFilePreset<Schema>(dbPath, defaultData);
+  const db = await JSONFilePreset<DBSchema>(dbPath, defaultData);
 
   return db;
 };
