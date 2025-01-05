@@ -77,43 +77,45 @@ A modern dashboard application for financial management and transaction tracking
 
 ## Directory Structure
 
+```
 src/
-├── app/ # Next.js app directory
-│ ├── api/ # API routes
-│ │ ├── cards/
-│ │ │ └── route.ts # Cards API endpoint
-│ │ └── transactions/
-│ │ └── recent/
-│ │ └── route.ts # Recent transactions endpoint
-│ ├── layout.tsx # Root layout with providers
-│ ├── page.tsx # Dashboard page
-│ └── loading.tsx # Global loading state
+├── app/                          # Next.js app directory
+│   ├── api/                     # API routes
+│   │   ├── cards/
+│   │   │   └── route.ts        # Cards API endpoint
+│   │   └── transactions/
+│   │       └── recent/
+│   │           └── route.ts    # Recent transactions endpoint
+│   ├── layout.tsx              # Root layout with providers
+│   ├── page.tsx                # Dashboard page
+│   └── loading.tsx             # Global loading state
 │
 ├── components/
-│ ├── dashboard/ # Dashboard-specific components
-│ │ ├── cards-section.tsx # Cards list container
-│ │ ├── credit-card.tsx # Credit card component
-│ │ ├── transaction-item.tsx # Individual transaction
-│ │ ├── transactions-section.tsx # Transactions list container
-│ │ ├── card-skeleton.tsx # Card loading state
-│ │ └── transaction-skeleton.tsx # Transaction loading state
-│ └── ui/ # Reusable UI components
-│ ├── card.tsx # Base card component
-│ └── skeleton.tsx # Base skeleton component
+│   ├── dashboard/              # Dashboard-specific components
+│   │   ├── cards-section.tsx   # Cards list container
+│   │   ├── credit-card.tsx     # Credit card component
+│   │   ├── transaction-item.tsx # Individual transaction
+│   │   ├── transactions-section.tsx # Transactions list container
+│   │   ├── card-skeleton.tsx   # Card loading state
+│   │   └── transaction-skeleton.tsx # Transaction loading state
+│   └── ui/                     # Reusable UI components
+│       ├── card.tsx           # Base card component
+│       └── skeleton.tsx       # Base skeleton component
 │
-├── db/ # Database configuration
-│ ├── index.ts # Database operations
-│ ├── schema.ts # Database schema types
-│ └── data.json # Mock data store
+├── db/                         # Database configuration
+│   ├── index.ts               # Database operations
+│   ├── schema.ts              # Database schema types
+│   └── data.json              # Mock data store
 │
-├── lib/ # Utilities and types
-│ ├── utils.ts # Utility functions
-│ ├── helpers.ts # API helper functions
-│ ├── card.d.ts # Card type definitions
-│ └── transaction.d.ts # Transaction type definitions
+├── lib/                        # Utilities and types
+│   ├── utils.ts               # Utility functions
+│   ├── helpers.ts             # API helper functions
+│   ├── card.d.ts             # Card type definitions
+│   └── transaction.d.ts      # Transaction type definitions
 │
-└── styles/ # Global styles
-└── globals.css # Global CSS and Tailwind imports
+└── styles/                     # Global styles
+    └── globals.css            # Global CSS and Tailwind imports
+```
 
 ## Choices made
 
@@ -125,4 +127,4 @@ src/
 
 - There are a lot I haven't completed due to unavailability of time.
 - The one that I would have liked to add, is tests.
-- Also, what the hell?, are you trying to get the entire MVP built by me in couple of days? 👀 😂
+- Also, hey? are you expecting to get the entire MVP built by me in couple of days? 👀 😂
